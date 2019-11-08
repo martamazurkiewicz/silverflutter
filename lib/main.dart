@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text("Pierwsze zajęcia!"),
         ),
-        body: Column(
+        body: ListView(
           children: <Widget>[
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -42,10 +42,43 @@ class MyApp extends StatelessWidget {
                       ),
                     ),
                   ),
+                  
+                )
+              ],
+            ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: EdgeInsets.all(5),
+                  child: Card(
+                    color: Colors.grey,
+                    child: Padding(
+                      padding: EdgeInsets.all(10),
+                      child: Column(
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: <Widget>[
+                              Text("Oportunity"),
+                              FlatButton.icon(
+                                icon: Icon(Icons.star),
+                                label: Text("star it"),
+                                onPressed: () {},
+                              )
+                            ],
+                          ),
+                          Image.asset("assets/opportunity.jpg")
+                        ],
+                      ),
+                    ),
+                  ),
+                  
                 )
               ],
             ),
           ],
+
         ),
       ),
     );
