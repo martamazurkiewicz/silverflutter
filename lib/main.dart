@@ -13,47 +13,39 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: Text("Pierwsze zajęcia!"),
         ),
-        body: Container(
-          child: Center(
-            child: Column(
+        body: Column(
+          children: <Widget>[
+            Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Padding( 
+                Padding(
                   padding: EdgeInsets.all(5),
-                  child:
-                  Container(
-                  color: Colors.grey,
-                  child: Column(
-                    children: <Widget>[
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceAround,
-                        children: <Widget>[
+                  child: Card(
+                    color: Colors.grey,
+                    child: Padding(
+                      padding: EdgeInsets.all(10),
+                      child: Column(
+                        children: [
                           Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             children: <Widget>[
-                              Text("tekst1"),
-                              Text(".Net", style: TextStyle(color: Colors.red))
+                              Text("Oportunity"),
+                              FlatButton.icon(
+                                icon: Icon(Icons.star),
+                                label: Text("star it"),
+                                onPressed: () {},
+                              )
                             ],
                           ),
-                          Text(
-                            "tekst2",
-                            style: TextStyle(fontSize: 30, color: Colors.red),
-                          )
+                          Image.asset("assets/opportunity.jpg")
                         ],
                       ),
-                      Image.asset("assets/silver.png"),
-                      RaisedButton(
-                        onPressed: () {},
-                        color: Colors.red,
-                        child: Text("Buttton, ktory nic nie robi"),
-                      )
-                    ],
+                    ),
                   ),
-                ),
                 )
-                
               ],
             ),
-          ),
+          ],
         ),
       ),
     );
